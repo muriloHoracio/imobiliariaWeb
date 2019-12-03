@@ -1,0 +1,22 @@
+{% extends "classification_base.html" %}
+
+{% block content %}
+
+<div class="card-columns">
+  <h1>Predictions</h1>
+
+  <div style="display:inline-block;">
+    {% for item in items %}
+      <div class="card">
+        <img src="{{item.img.url}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Result: {{item.prediction}}</h5>
+        </div>
+      </div>
+
+    {% endfor %}
+  </div>
+
+</div>
+
+{% endblock content %}
